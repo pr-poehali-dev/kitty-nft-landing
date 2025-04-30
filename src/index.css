@@ -9,41 +9,33 @@
     --background: 0 0% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 8%;
+    --card: 0 0% 9%;
     --card-foreground: 0 0% 98%;
 
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 186 100% 50%;
-    --primary-foreground: 0 0% 6%;
+    /* Красный акцент с сайта Azuki */
+    --primary: 348 83% 47%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 190 100% 66%;
-    --secondary-foreground: 0 0% 6%;
+    --secondary: 348 63% 52%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 63.9%;
 
-    --accent: 186 100% 50%;
-    --accent-foreground: 0 0% 6%;
+    --accent: 348 83% 47%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 186 100% 50%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 348 83% 47%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -71,11 +63,11 @@
   }
 
   .hover-scale {
-    @apply transition-transform duration-200 hover:scale-105;
+    @apply transition-transform duration-300 hover:scale-[1.03];
   }
 
   .nft-grid-item {
-    @apply overflow-hidden rounded-md bg-muted hover-scale;
+    @apply overflow-hidden rounded-sm bg-muted hover-scale;
   }
 
   .glow-text {
@@ -92,5 +84,45 @@
   
   .progress-bar-fill {
     @apply h-full bg-primary;
+  }
+
+  /* Стили на основе дизайна Azuki */
+  .azuki-label {
+    @apply bg-black px-2 py-0.5 text-xs uppercase tracking-wider rounded-sm;
+  }
+
+  .azuki-card {
+    @apply bg-card border-0 rounded-sm overflow-hidden transition-transform hover:scale-[1.03] duration-300;
+  }
+
+  .azuki-button {
+    @apply bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-sm transition-colors duration-200;
+  }
+
+  .azuki-nav-item {
+    @apply text-sm uppercase font-medium tracking-wider hover:text-primary transition-colors duration-200;
+  }
+  
+  .azuki-heading {
+    @apply font-space font-bold uppercase tracking-wide text-foreground;
+  }
+  
+  /* Полоса прокрутки */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.7);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
   }
 }

@@ -30,18 +30,18 @@ const MintButton = () => {
       <DialogTrigger asChild>
         <Button 
           variant="outline" 
-          className="bg-transparent border-primary text-primary hover:bg-primary/10 font-space"
+          className="bg-transparent border-primary text-primary hover:bg-primary/10 uppercase tracking-wider font-medium text-sm rounded-sm"
         >
           Mint Now
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] bg-card">
+      <DialogContent className="sm:max-w-[425px] bg-card border border-primary/30">
         <DialogHeader>
-          <DialogTitle className="text-center text-xl">Mint Kitty NFT</DialogTitle>
+          <DialogTitle className="text-center text-xl azuki-heading">MINT KITTY NFT</DialogTitle>
         </DialogHeader>
         <div className="space-y-6 py-4">
           <div className="space-y-2">
-            <label className="text-sm text-muted-foreground">Количество</label>
+            <label className="text-sm text-muted-foreground uppercase tracking-wider">Количество</label>
             <div className="flex items-center space-x-4">
               <Slider 
                 value={[count]} 
@@ -57,7 +57,7 @@ const MintButton = () => {
                 onChange={(e) => setCount(Number(e.target.value))} 
                 min={1} 
                 max={10} 
-                className="w-16" 
+                className="w-16 bg-muted" 
               />
             </div>
           </div>
@@ -75,7 +75,7 @@ const MintButton = () => {
           
           <Button 
             onClick={handleMint} 
-            className="w-full" 
+            className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm uppercase tracking-wider" 
             disabled={isMinting}
           >
             {isMinting ? 'Минтинг...' : 'Подтвердить Mint'}

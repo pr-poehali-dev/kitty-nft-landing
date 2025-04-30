@@ -3,9 +3,9 @@ import FeatureCard from "@/components/FeatureCard";
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="py-16 md:py-24 bg-muted/20">
+    <section id="features" className="py-16 md:py-24 bg-muted/5">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold font-space text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold font-space text-center mb-12 uppercase">
           Особенности коллекции
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -52,25 +52,25 @@ const FeaturesSection = () => {
 
           <FeatureCard title="Утилити" icon={<Gem size={24} />}>
             <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-col items-center text-center p-3 border border-border rounded-md hover:border-primary/50 transition-colors">
+              <div className="flex flex-col items-center text-center p-3 border border-border rounded-sm hover:border-primary/50 transition-colors">
                 <div className="w-10 h-10 flex items-center justify-center mb-2 text-primary">
                   🏛️
                 </div>
                 <span className="text-sm">Доступ к DAO</span>
               </div>
-              <div className="flex flex-col items-center text-center p-3 border border-border rounded-md hover:border-primary/50 transition-colors">
+              <div className="flex flex-col items-center text-center p-3 border border-border rounded-sm hover:border-primary/50 transition-colors">
                 <div className="w-10 h-10 flex items-center justify-center mb-2 text-primary">
                   👕
                 </div>
                 <span className="text-sm">Эксклюзивный мерч</span>
               </div>
-              <div className="flex flex-col items-center text-center p-3 border border-border rounded-md hover:border-primary/50 transition-colors">
+              <div className="flex flex-col items-center text-center p-3 border border-border rounded-sm hover:border-primary/50 transition-colors">
                 <div className="w-10 h-10 flex items-center justify-center mb-2 text-primary">
                   🗳️
                 </div>
                 <span className="text-sm">Голосования</span>
               </div>
-              <div className="flex flex-col items-center text-center p-3 border border-border rounded-md hover:border-primary/50 transition-colors">
+              <div className="flex flex-col items-center text-center p-3 border border-border rounded-sm hover:border-primary/50 transition-colors">
                 <div className="w-10 h-10 flex items-center justify-center mb-2 text-primary">
                   🎮
                 </div>

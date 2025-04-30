@@ -33,17 +33,17 @@ const ConnectWalletButton = () => {
     <>
       <Button 
         onClick={handleConnect} 
-        className="font-space"
+        className="bg-primary hover:bg-primary/90 text-white rounded-sm uppercase tracking-wider font-medium text-sm"
         disabled={isConnecting}
       >
         <Wallet className="mr-2 h-4 w-4" />
-        {isConnecting ? 'Подключение...' : 'Connect Wallet'}
+        {isConnecting ? 'Подключение...' : 'Connect'}
       </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="sm:max-w-[425px] bg-card">
           <DialogHeader>
-            <DialogTitle className="text-center text-xl">MetaMask не найден</DialogTitle>
+            <DialogTitle className="text-center text-xl azuki-heading">MetaMask не найден</DialogTitle>
           </DialogHeader>
           <div className="text-center space-y-4 py-4">
             <p className="text-muted-foreground">
@@ -52,7 +52,7 @@ const ConnectWalletButton = () => {
             <Button 
               variant="outline" 
               onClick={() => window.open('https://metamask.io/download/', '_blank')}
-              className="w-full"
+              className="w-full border-primary text-primary hover:bg-primary/10"
             >
               Установить MetaMask
             </Button>

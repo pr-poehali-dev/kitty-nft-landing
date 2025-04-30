@@ -12,7 +12,10 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+      },
 			screens: {
 				'2xl': '1400px'
 			}
@@ -54,7 +57,9 @@ export default {
 				},
 				kitty: {
 					dark: '#0F0F0F', 
-					accent: '#00F0FF'
+					accent: '#e11d48',
+					red: '#e11d48',
+					light: '#fffbeb'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -96,12 +101,17 @@ export default {
 					'50%': { 
 						boxShadow: '0 0 30px hsla(var(--primary) / 0.9)' 
 					}
-				}
+				},
+        'marquee': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        'marquee': 'marquee 25s linear infinite'
 			},
 			fontFamily: {
 				'space': ['Space Grotesk', 'monospace'],

@@ -10,17 +10,17 @@ const NftGridItem = ({ imageUrl, id }: NftGridItemProps) => {
 
   return (
     <div 
-      className="nft-grid-item aspect-square bg-muted relative overflow-hidden"
+      className="aspect-square bg-muted relative overflow-hidden rounded-sm azuki-card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <img 
         src={imageUrl} 
         alt={`Kitty NFT #${id}`} 
-        className={`w-full h-full object-cover transition-transform duration-300 ${isHovered ? 'scale-110' : 'scale-100'}`}
+        className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}
       />
       <div 
-        className={`absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-3 flex flex-col justify-end transition-opacity duration-300 ${
+        className={`absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-3 flex flex-col justify-end transition-all duration-300 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}
       >
